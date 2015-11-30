@@ -28,7 +28,7 @@ suite('Test for meta: { "x": { alias: "y" }}', function() {
               var System = new Systemjs.constructor(); // remove this line to make it work (that is, in this case systemjs needs config at runtime too)
               var testCode = ' return System.import("'+ normalized +'").then(function(m) { return {q: m.q, fromLocal: m.fromLocal};});';        
               eval('(function() {'+output.source + testCode + '})()').then(function(result) {    
-                  console.dir(result);
+                  assert.equal(result.fromLocal,  'x', 'import from alias');
                   
               }).then(done, done);
           });
