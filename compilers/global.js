@@ -1,10 +1,10 @@
 var traceur = require('traceur');
-var ParseTreeTransformer = traceur.get('codegeneration/ParseTreeTransformer.js').ParseTreeTransformer;
-var parseStatements = traceur.get('codegeneration/PlaceholderParser.js').parseStatements;
-var parseStatement = traceur.get('codegeneration/PlaceholderParser.js').parseStatement;
-var parseExpression = traceur.get('codegeneration/PlaceholderParser.js').parseExpression;
-var Script = traceur.get('syntax/trees/ParseTrees.js').Script;
-var FunctionBody = traceur.get('syntax/trees/ParseTrees.js').FunctionBody;
+var ParseTreeTransformer = $traceurRuntime.getModule('traceur@0.0.95/src/codegeneration/ParseTreeTransformer.js').ParseTreeTransformer;
+var parseStatements = $traceurRuntime.getModule('traceur@0.0.95/src/codegeneration/PlaceholderParser.js').parseStatements;
+var parseStatement = $traceurRuntime.getModule('traceur@0.0.95/src/codegeneration/PlaceholderParser.js').parseStatement;
+var parseExpression = $traceurRuntime.getModule('traceur@0.0.95/src/codegeneration/PlaceholderParser.js').parseExpression;
+var Script = $traceurRuntime.getModule('traceur@0.0.95/src/syntax/trees/ParseTrees.js').Script;
+var FunctionBody = $traceurRuntime.getModule('traceur@0.0.95/src/syntax/trees/ParseTrees.js').FunctionBody;
 
 // wraps global scripts
 function GlobalTransformer(name, deps, exportName, globals, systemGlobal) {

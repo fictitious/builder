@@ -1,11 +1,11 @@
 var traceur = require('traceur');
-var ParseTreeTransformer = traceur.get('codegeneration/ParseTreeTransformer.js').ParseTreeTransformer;
-var CallExpression = traceur.get('syntax/trees/ParseTrees.js').CallExpression;
-var ArgumentList = traceur.get('syntax/trees/ParseTrees.js').ArgumentList;
-var ArrayLiteral = traceur.get('syntax/trees/ParseTrees.js').ArrayLiteral;
-var createStringLiteral = traceur.get('codegeneration/ParseTreeFactory.js').createStringLiteral;
-var parseExpression = traceur.get('codegeneration/PlaceholderParser.js').parseExpression;
-var FunctionBody = traceur.get('syntax/trees/ParseTrees.js').FunctionBody;
+var ParseTreeTransformer = $traceurRuntime.getModule('traceur@0.0.95/src/codegeneration/ParseTreeTransformer.js').ParseTreeTransformer;
+var CallExpression = $traceurRuntime.getModule('traceur@0.0.95/src/syntax/trees/ParseTrees.js').CallExpression;
+var ArgumentList = $traceurRuntime.getModule('traceur@0.0.95/src/syntax/trees/ParseTrees.js').ArgumentList;
+var ArrayLiteral = $traceurRuntime.getModule('traceur@0.0.95/src/syntax/trees/ParseTrees.js').ArrayLiteral;
+var createStringLiteral = $traceurRuntime.getModule('traceur@0.0.95/src/codegeneration/ParseTreeFactory.js').createStringLiteral;
+var parseExpression = $traceurRuntime.getModule('traceur@0.0.95/src/codegeneration/PlaceholderParser.js').parseExpression;
+var FunctionBody = $traceurRuntime.getModule('traceur@0.0.95/src/syntax/trees/ParseTrees.js').FunctionBody;
 
 // converts anonymous System.register([] into named System.register('name', [], ...
 // NB need to add that if no anon, last named must define this module

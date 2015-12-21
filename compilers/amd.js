@@ -2,8 +2,8 @@ var System = require('systemjs');
 var traceur = require('traceur');
 var vm = require('vm');
 
-var ParseTreeTransformer = traceur.get('codegeneration/ParseTreeTransformer.js').ParseTreeTransformer;
-var parseExpression = traceur.get('codegeneration/PlaceholderParser.js').parseExpression;
+var ParseTreeTransformer = $traceurRuntime.getModule('traceur@0.0.95/src/codegeneration/ParseTreeTransformer.js').ParseTreeTransformer;
+var parseExpression = $traceurRuntime.getModule('traceur@0.0.95/src/codegeneration/PlaceholderParser.js').parseExpression;
 
 var CJSRequireTransformer = require('./cjs').CJSRequireTransformer;
 var Promise = require('bluebird');

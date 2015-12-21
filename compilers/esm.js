@@ -1,11 +1,11 @@
 var traceur = require('traceur');
 
-var ParseTreeTransformer = traceur.get('codegeneration/ParseTreeTransformer.js').ParseTreeTransformer;
-var ModuleSpecifier = traceur.get('syntax/trees/ParseTrees.js').ModuleSpecifier;
-var createStringLiteralToken = traceur.get('codegeneration/ParseTreeFactory.js').createStringLiteralToken;
-var InstantiateModuleTransformer = traceur.get('codegeneration/InstantiateModuleTransformer.js').InstantiateModuleTransformer;
-var CollectingErrorReporter = traceur.get('util/CollectingErrorReporter.js').CollectingErrorReporter;
-var UniqueIdentifierGenerator = traceur.get('codegeneration/UniqueIdentifierGenerator.js').UniqueIdentifierGenerator;
+var ParseTreeTransformer = $traceurRuntime.getModule('traceur@0.0.95/src/codegeneration/ParseTreeTransformer.js').ParseTreeTransformer;
+var ModuleSpecifier = $traceurRuntime.getModule('traceur@0.0.95/src/syntax/trees/ParseTrees.js').ModuleSpecifier;
+var createStringLiteralToken = $traceurRuntime.getModule('traceur@0.0.95/src/codegeneration/ParseTreeFactory.js').createStringLiteralToken;
+var InstantiateModuleTransformer = $traceurRuntime.getModule('traceur@0.0.95/src/codegeneration/InstantiateModuleTransformer.js').InstantiateModuleTransformer;
+var CollectingErrorReporter = $traceurRuntime.getModule('traceur@0.0.95/src/util/CollectingErrorReporter.js').CollectingErrorReporter;
+var UniqueIdentifierGenerator = $traceurRuntime.getModule('traceur@0.0.95/src/codegeneration/UniqueIdentifierGenerator.js').UniqueIdentifierGenerator;
 
 function InstantiateOnlyCompiler() {
   traceur.Compiler.apply(this, arguments);
